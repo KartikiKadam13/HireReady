@@ -1,0 +1,25 @@
+<div class="author">
+    <h1 class="author__heading">Ace The Interview</h1>
+    <p class="author__body">Your future job is just one well-prepared interview away. Make it count.</p>
+</div>
+<img src="/Img/Blog_img.png" alt="Web_Dev" class="hero-image" width="688" height="400">
+<section class="articles">
+    <h1 class="articles__heading">Latest Post</h1>
+    <ul class="article-ul">
+        <% data.forEach(post => { %>
+         
+       
+        <li>
+            <a href="/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+
+    <% if (nextPage !== null) { %>
+        <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Post</a>
+    <% } %>
+    
+</section>

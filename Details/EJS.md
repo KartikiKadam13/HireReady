@@ -1,0 +1,2 @@
+  <!--when app.js is run then it will get directed to main.js by using app.use and after that at main.js in route it will direct to render the index.ejs in the main.ejs -->
+    <%- body %>    : main.ejs
